@@ -18,12 +18,16 @@ let score = 20;
 // define again btn function
 document.querySelector('.again').addEventListener
     ('click', function () {
+        score=20;
+        secretNumber=Math.trunc(Math.random()*20)+1;
         document.querySelector('.message').textContent='Start guessing...';
+        document.querySelector('.score').textContent=score;
         document.querySelector('.number').textContent='?';
         document.querySelector('.guess').value='';
-        // document.querySelector('.score').textContent='20';
-        score=20;
+
+        // CSS style part 
         document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('.number').style.width = '15rem';
     });
 
 document.querySelector('.check').addEventListener
